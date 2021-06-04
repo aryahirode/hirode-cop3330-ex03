@@ -10,6 +10,7 @@ public class App {
     static Scanner in = new Scanner(System.in);
     public static void main(String[] args) {
         App myApp = new App();
+        myApp.output(myApp.quotePrompt(), myApp.authorPrompt());
     }
 
     private String quotePrompt() {
@@ -17,4 +18,12 @@ public class App {
         return in.nextLine();
     }
 
+    private String authorPrompt() {
+        System.out.print("Who said it? ");
+        return in.nextLine();
+    }
+
+    private void output(String quote, String author) {
+        System.out.println(author + " says, \"" + quote + "\"");
+    }
 }
